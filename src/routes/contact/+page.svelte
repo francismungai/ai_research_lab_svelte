@@ -1,0 +1,85 @@
+<svelte:head>
+  <title>Contact | USD AI Research</title>
+</svelte:head>
+
+<div class="py-4 px-4 sm:px-6 lg:px-8 flex-1 flex flex-col">
+  <main class="max-w-7xl mx-auto w-full px-6 py-10 md:px-12 bg-white/70 backdrop-blur-sm rounded-[2.5rem] shadow-2xl border border-white/20 min-h-[calc(100vh-8rem)] flex flex-col">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl lg:text-5xl font-bold text-[#C53030] tracking-tight mb-4">Contact</h1>
+      <p class="text-gray-700 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+        Get in touch with the USD AI Research team. We welcome collaboration opportunities, inquiries about our research, and partnerships.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+      <div class="bg-gray-50/50 p-8 rounded-2xl border border-gray-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="bx bx-message-square-detail text-3xl text-[#C53030]"></i>
+          <h2 class="text-2xl font-bold text-gray-900">Contact Info</h2>
+        </div>
+
+        <div class="space-y-6">
+          <div>
+            <span class="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Email</span>
+            <div class="flex flex-col gap-2">
+              <a href="mailto:usd.airesearch.lab@gmail.com" class="text-[#C53030] font-bold hover:underline hover:text-red-800 transition-colors break-all w-fit">
+                usd.airesearch.lab@gmail.com
+              </a>
+              <a href="mailto:kc.santosh@usd.edu" class="text-[#C53030] font-bold hover:underline hover:text-red-800 transition-colors break-all w-fit">
+                kc.santosh@usd.edu
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <span class="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">LinkedIn</span>
+            <a href="https://www.linkedin.com/company/kc-ai/" target="_blank" class="inline-flex items-start text-[#C53030] font-bold hover:underline hover:text-red-800 transition-colors break-all w-fit">
+              <i class="bx bxl-linkedin-square text-xl mr-2 shrink-0 mt-0.5"></i>
+              linkedin.com/company/kc-ai
+            </a>
+          </div>
+
+          <div>
+            <span class="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">GitHub</span>
+            <a href="https://github.com/USD-AI-ResearchLab/" target="_blank" class="inline-flex items-start text-[#C53030] font-bold hover:underline hover:text-red-800 transition-colors break-all w-fit">
+              <i class="bx bxl-github text-xl mr-2 shrink-0 mt-0.5"></i>
+              github.com/USD-AI-ResearchLab
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50/50 p-8 rounded-2xl border border-gray-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="bx bx-map text-3xl text-[#C53030]"></i>
+          <h2 class="text-2xl font-bold text-gray-900">Location</h2>
+        </div>
+
+        <div>
+          <span class="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Address</span>
+          <div class="text-gray-800 font-medium leading-relaxed">
+            <p class="font-bold text-gray-900">University of South Dakota</p>
+            <p>Department of Computer Science</p>
+            <p>414 E Clark St</p>
+            <p>Vermillion, SD 57069</p>
+            <p>United States</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mt-auto">
+      <div class="flex items-center gap-4 mb-6">
+        <img src="/assets/logo-BHzomKBk.svg" alt="USD AI Logo" class="h-10 w-auto object-contain filter-[drop-shadow(0_0_1px_#fff)_drop-shadow(0_0_2px_#fff)]" />
+        <div>
+          <h3 class="text-xl font-bold text-[#C53030]">Visit Us</h3>
+          <p class="text-sm font-medium text-gray-600">USD Computer Science Department</p>
+        </div>
+      </div>
+
+      <div class="w-full h-64 md:h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-inner border border-gray-300 relative group">
+        <iframe title="Google Maps Location of USD AI Research Lab" src="https://maps.google.com/maps?q=414%20E%20Clark%20St,%20Vermillion,%20SD%2057069&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border: 0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 grayscale-20 contrast-125 group-hover:grayscale-0 transition-all duration-500"></iframe>
+      </div>
+    </section>
+  </main>
+</div>
