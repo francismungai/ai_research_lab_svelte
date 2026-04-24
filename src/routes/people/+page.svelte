@@ -1,4 +1,6 @@
 <script lang="ts">
+  let { data } = $props();
+
   let activeRole = $state("All");
   let activeLetter = $state("All");
 
@@ -14,37 +16,9 @@
     "Alumni": ["alumni", "graduate", "former"],
   };
 
-  import { facultyData } from '$lib/data/faculty';
-  import { studentsData } from '$lib/data/students';
-  import { alumniData } from '$lib/data/alumni';
-  import { collaboratorsData } from '$lib/data/collaborators';
-  import { staffData } from '$lib/data/staff';
+  const people = data.people;
 
-  const rawPeople = [
-    ...facultyData,
-    ...studentsData,
-    ...staffData,
-    ...alumniData,
-    ...collaboratorsData
-  ];
-
-  const seen = new Set();
-  const uniquePeople = rawPeople.filter(person => {
-    const key = `${person.name}-${person.role}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
-
-  const people = uniquePeople.map(person => ({
-    name: person.name,
-    role: person.role,
-    img: person.photo || (person as any).img || null,
-    scholar: person.scholarUrl || (person as any).scholar || null,
-    dblp: person.dblpUrl || (person as any).dblp || null
-  }));
-
-  let filteredPeople = $derived(people.filter(person => {
+  let filteredPeople = $derived(people.filter((person: any) => {
     let cleanName = person.name.replace(/^(Prof\.|Dr\.)\s*/i, "").trim();
     let firstLetter = cleanName.charAt(0).toUpperCase();
     let roleText = person.role.toLowerCase();

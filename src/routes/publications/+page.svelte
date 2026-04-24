@@ -1,4 +1,6 @@
 <script lang="ts">
+  let { data } = $props();
+
   let activeTab = $state<'samples' | 'papers'>('samples');
   let searchQuery = $state('');
   let currentFilter = $state('All');
@@ -24,21 +26,19 @@
     { label: "Security", value: "Security" }
   ];
 
-  import { PUBLICATIONS_BY_YEAR } from '$lib/data/publicationsByYear';
-  import { PUBLICATIONS, BOOKS } from '$lib/data/publications';
+  const allPapers = data.publications;
+  const books = data.books;
+  const yearSections = data.yearSections;
+  const sampleCount = data.sampleCount;
 
-  const samples = PUBLICATIONS_BY_YEAR.flatMap(section => section.publications);
-  const allPapers = PUBLICATIONS;
-  const books = BOOKS;
-
-  const availableYears = ['All', ...PUBLICATIONS_BY_YEAR.map(section => section.year)];
+  const availableYears = ['All', ...yearSections.map((section: any) => section.year)];
   let filteredYearSections = $derived(
     activeYearFilter === 'All' 
-      ? PUBLICATIONS_BY_YEAR 
-      : PUBLICATIONS_BY_YEAR.filter(section => section.year === activeYearFilter)
+      ? yearSections 
+      : yearSections.filter((section: any) => section.year === activeYearFilter)
   );
 
-  let filteredPapers = $derived(allPapers.filter(paper => {
+  let filteredPapers = $derived(allPapers.filter((paper: any) => {
     const text = `${paper.title} ${paper.authors || ''} ${paper.venue || ''} ${paper.year || ''}`.toLowerCase();
     const searchMatch = text.includes(searchQuery.toLowerCase());
     const filterMatch = currentFilter === 'All' || text.includes(currentFilter.toLowerCase());
@@ -86,7 +86,7 @@
           class="px-6 py-3 text-sm font-bold border-b-2 transition-colors {activeTab === 'samples' ? 'border-[#C53030] text-[#C53030]' : 'border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-300'}"
         >
           Few Samples
-          <span class="ml-2 text-xs px-2 py-0.5 rounded-full {activeTab === 'samples' ? 'bg-red-100 text-[#C53030]' : 'bg-gray-200 text-gray-600'}">{samples.length}</span>
+          <span class="ml-2 text-xs px-2 py-0.5 rounded-full {activeTab === 'samples' ? 'bg-red-100 text-[#C53030]' : 'bg-gray-200 text-gray-600'}">{sampleCount}</span>
         </button>
         <button
           onclick={() => activeTab = 'papers'}
