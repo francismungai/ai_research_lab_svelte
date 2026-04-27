@@ -1,4 +1,5 @@
 import { supabase } from '$lib/supabase';
+import { base } from '$app/paths';
 import type { PageServerLoad } from './$types';
 
 export const prerender = true;
@@ -17,7 +18,7 @@ export const load: PageServerLoad = async () => {
   const people = (rawPeople ?? []).map(p => ({
     name: p.name,
     role: p.role ?? '',
-    img: p.photo_url ?? null,
+    img: p.photo_url ? `${base}${p.photo_url}` : null,
     scholar: p.scholar_url ?? null,
     dblp: p.dblp_url ?? null,
     website: p.website_url ?? null,
@@ -28,3 +29,4 @@ export const load: PageServerLoad = async () => {
 
   return { people };
 };
+
