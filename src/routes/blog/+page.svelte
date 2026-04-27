@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { supabase } from '$lib/supabase';
   import { authState } from '$lib/auth.svelte';
+  import { base } from '$app/paths';
 
   // State
   let posts = $state<any[]>([]);
@@ -53,7 +54,7 @@
       <!-- Write Post button (shown when logged in) -->
       {#if authState.user}
         <a
-          href="/create-post"
+          href="{base}/create-post"
           class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-[#C53030] text-white font-bold text-sm rounded-xl hover:bg-red-800 transition-colors shadow-md"
         >
           <i class="bx bx-edit-alt text-lg"></i>
@@ -80,7 +81,7 @@
       <!-- Posts grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 flex-1 w-full">
         {#each posts as post}
-          <a href="/blog/{post.slug}" class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 flex flex-col">
+          <a href="{base}/blog/{post.slug}" class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 flex flex-col">
             {#if post.cover_image_url}
               <div class="h-44 overflow-hidden">
                 <img src={post.cover_image_url} alt={post.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -121,11 +122,11 @@
         The USD AI Research Lab Blog features technical deep-dives into our research, explaining complex concepts in accessible terms. Our goal is to bridge the gap between academic research and practical understanding, sharing insights that benefit the broader AI community.
       </p>
       <div class="flex flex-wrap gap-4 md:gap-6">
-        <a href="/publications" class="inline-flex items-center text-[#C53030] hover:text-red-800 font-bold transition-colors">
+        <a href="{base}/publications" class="inline-flex items-center text-[#C53030] hover:text-red-800 font-bold transition-colors">
           View All Publications
           <i class="bx bx-right-arrow-alt text-lg ml-1"></i>
         </a>
-        <a href="/people" class="inline-flex items-center text-[#C53030] hover:text-red-800 font-bold transition-colors">
+        <a href="{base}/people" class="inline-flex items-center text-[#C53030] hover:text-red-800 font-bold transition-colors">
           Meet Our Team
           <i class="bx bx-right-arrow-alt text-lg ml-1"></i>
         </a>

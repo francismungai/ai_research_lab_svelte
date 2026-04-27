@@ -3,6 +3,7 @@
   import { supabase } from '$lib/supabase';
   import { showToast } from '$lib/components/Toast.svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
 
   let newPassword = $state('');
   let confirmNewPassword = $state('');
@@ -52,7 +53,7 @@
       } else {
         showToast('Password updated successfully! Redirecting to sign in...', 'success');
         setTimeout(() => {
-          goto('/login');
+          goto(`${base}/login`);
         }, 2000);
       }
     } catch (err) {
@@ -144,14 +145,14 @@
       </button>
 
       <div class="text-center pt-4">
-        <a href="/login" class="text-gray-500 hover:text-gray-800 font-medium text-sm transition-colors">
+        <a href="{base}/login" class="text-gray-500 hover:text-gray-800 font-medium text-sm transition-colors">
           Back to sign in
         </a>
       </div>
     </form>
   </main>
 
-  <a href="/blog" class="inline-flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-white/30">
+  <a href="{base}/blog" class="inline-flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-white/30">
     <i class="bx bx-chevron-left text-lg mr-1"></i> Back to Blog
   </a>
 </div>

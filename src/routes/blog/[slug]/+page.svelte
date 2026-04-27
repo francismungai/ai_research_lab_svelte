@@ -3,6 +3,7 @@
   import { onMount } from 'svelte';
   import { supabase } from '$lib/supabase';
   import { marked } from 'marked';
+  import { base } from '$app/paths';
 
   let post = $state<any>(null);
   let loading = $state(true);
@@ -44,7 +45,7 @@
 <div class="py-4 px-4 sm:px-6 lg:px-8 flex-1 flex flex-col">
   <main class="max-w-7xl mx-auto px-6 py-10 md:px-12 bg-white/70 backdrop-blur-sm rounded-[2.5rem] shadow-2xl border border-white/20 min-h-[calc(100vh-8rem)] w-full">
     
-    <a href="/blog" class="inline-flex items-center text-gray-500 hover:text-[#C53030] font-medium mb-8 transition-colors">
+    <a href="{base}/blog" class="inline-flex items-center text-gray-500 hover:text-[#C53030] font-medium mb-8 transition-colors">
       <i class="bx bx-left-arrow-alt text-xl mr-1"></i> Back to Blog
     </a>
 

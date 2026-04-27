@@ -2,6 +2,7 @@
   import { supabase } from '$lib/supabase';
   import { showToast } from '$lib/components/Toast.svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
 
   let email = $state('');
   let password = $state('');
@@ -27,7 +28,7 @@
       } else {
         showToast('Signed in successfully! Redirecting...', 'success');
         setTimeout(() => {
-          goto('/blog');
+          goto(`${base}/blog`);
         }, 1200);
       }
     } catch (err) {
@@ -46,7 +47,7 @@
 <div class="py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center flex-1">
   <main class="w-full max-w-md bg-white/70 backdrop-blur-sm rounded-[2.5rem] shadow-2xl border border-white/20 p-8 md:p-10">
     <div class="text-center mb-8">
-      <img src="/assets/logo-BHzomKBk.svg" alt="USD AI Logo" class="h-12 w-auto mx-auto mb-4" />
+      <img src="{base}/assets/logo-BHzomKBk.svg" alt="USD AI Logo" class="h-12 w-auto mx-auto mb-4" />
       <h1 class="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">Sign In</h1>
       <p class="text-sm font-medium text-gray-600 mt-2">Sign in with your USD email to access the research lab portal</p>
     </div>
@@ -96,8 +97,8 @@
       </button>
 
       <div class="flex items-center justify-between text-sm pt-2">
-        <a href="/signup" class="text-[#C53030] hover:text-red-800 font-bold transition-colors">Sign Up</a>
-        <a href="/forgot-password" class="text-gray-500 hover:text-gray-800 font-bold transition-colors">Forgot password?</a>
+        <a href="{base}/signup" class="text-[#C53030] hover:text-red-800 font-bold transition-colors">Sign Up</a>
+        <a href="{base}/forgot-password" class="text-gray-500 hover:text-gray-800 font-bold transition-colors">Forgot password?</a>
       </div>
     </form>
 
@@ -120,7 +121,7 @@
     </div>
 
     <div class="mt-8 text-center border-t border-gray-200 pt-6">
-      <a href="/blog" class="inline-flex items-center text-gray-600 hover:text-[#C53030] font-bold transition-colors">
+      <a href="{base}/blog" class="inline-flex items-center text-gray-600 hover:text-[#C53030] font-bold transition-colors">
         <i class="bx bx-left-arrow-alt text-lg mr-1"></i> Back to Blog
       </a>
     </div>

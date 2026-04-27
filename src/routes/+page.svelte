@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <svelte:head>
   <title>USD AI Research - University of South Dakota</title>
 </svelte:head>
@@ -5,7 +9,7 @@
 <div class="py-4 px-4 sm:px-6 lg:px-8 space-y-6 lg:space-y-8 flex-1 flex flex-col">
   <div class="max-w-7xl w-full mx-auto px-6 py-6 md:px-12 bg-white/60 backdrop-blur-sm rounded-[2.5rem] shadow-2xl border border-white/20 min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-7rem)] flex flex-col justify-between">
     <section class="text-center mb-6 flex-1 flex flex-col justify-center">
-      <img src="/assets/logo-BHzomKBk.svg" alt="Logo" class="h-24 md:h-28 lg:h-32 w-auto mx-auto mb-4 lg:mb-6 [filter:drop-shadow(0_0_1px_#fff)_drop-shadow(0_0_2px_#fff)_drop-shadow(0_0_3px_#fff)]" />
+      <img src="{base}/assets/logo-BHzomKBk.svg" alt="Logo" class="h-24 md:h-28 lg:h-32 w-auto mx-auto mb-4 lg:mb-6 [filter:drop-shadow(0_0_1px_#fff)_drop-shadow(0_0_2px_#fff)_drop-shadow(0_0_3px_#fff)]" />
       <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#C53030] mb-2 md:mb-4 tracking-tight">
         USD AI Research
       </h1>
@@ -43,7 +47,7 @@
 
   <section class="max-w-7xl w-full mx-auto px-6 py-8 md:px-12 bg-white/60 backdrop-blur-sm rounded-[2.5rem] shadow-2xl border border-white/20 flex flex-col lg:flex-row items-center lg:items-start gap-8">
     <div class="w-64 h-64 shrink-0">
-      <img src="/assets/kc-santosh.jpg" alt="Prof. KC Santosh" class="w-full h-full object-cover rounded-2xl shadow-lg border-4 border-white" />
+      <img src="{base}/assets/kc-santosh.jpg" alt="Prof. KC Santosh" class="w-full h-full object-cover rounded-2xl shadow-lg border-4 border-white" />
     </div>
     <div class="flex-1 text-left flex flex-col justify-center min-h-[16rem]">
       <h2 class="text-xl md:text-2xl font-extrabold text-gray-900 mb-4">

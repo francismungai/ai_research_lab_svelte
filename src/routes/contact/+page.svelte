@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <svelte:head>
   <title>Contact | USD AI Research</title>
 </svelte:head>
@@ -70,7 +74,7 @@
 
     <section class="mt-auto">
       <div class="flex items-center gap-4 mb-6">
-        <img src="/assets/logo-BHzomKBk.svg" alt="USD AI Logo" class="h-10 w-auto object-contain filter-[drop-shadow(0_0_1px_#fff)_drop-shadow(0_0_2px_#fff)]" />
+        <img src="{base}/assets/logo-BHzomKBk.svg" alt="USD AI Logo" class="h-10 w-auto object-contain filter-[drop-shadow(0_0_1px_#fff)_drop-shadow(0_0_2px_#fff)]" />
         <div>
           <h3 class="text-xl font-bold text-[#C53030]">Visit Us</h3>
           <p class="text-sm font-medium text-gray-600">USD Computer Science Department</p>

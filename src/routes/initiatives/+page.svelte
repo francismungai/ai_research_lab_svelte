@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <svelte:head>
   <title>Initiatives | USD AI Research</title>
 </svelte:head>
@@ -70,7 +74,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl shadow-md border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
           <div class="h-48 bg-gray-50 flex items-center justify-center border-b border-gray-100 p-4">
-            <img src="/assets/ai-symposium-new.svg" alt="AI Symposium" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/ai-symposium-new.svg" alt="AI Symposium" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold text-gray-900 mb-2">AI Symposium</h3>
@@ -87,7 +91,7 @@
 
         <div class="bg-white rounded-2xl shadow-md border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
           <div class="h-48 bg-gray-50 flex items-center justify-center border-b border-gray-100 p-4">
-            <img src="/assets/ai-club-new.svg" alt="AI Club" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/ai-club-new.svg" alt="AI Club" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold text-gray-900 mb-2">AI Club</h3>
@@ -98,7 +102,7 @@
 
         <div class="bg-white rounded-2xl shadow-md border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
           <div class="h-48 bg-gray-50 flex items-center justify-center border-b border-gray-100 p-4">
-            <img src="/assets/rtip2r-new.svg" alt="RTIP2R Conference" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/rtip2r-new.svg" alt="RTIP2R Conference" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold text-gray-900 mb-2">RTIP2R Conference</h3>
@@ -117,7 +121,7 @@
 
         <div class="bg-white rounded-2xl shadow-md border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
           <div class="h-48 bg-gray-50 flex items-center justify-center border-b border-gray-100 p-4">
-            <img src="/assets/ai-engineering-new.svg" alt="AIEI" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/ai-engineering-new.svg" alt="AIEI" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold text-gray-900 mb-2">AIEI</h3>
@@ -128,7 +132,7 @@
 
         <div class="bg-white rounded-2xl shadow-md border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
           <div class="h-48 bg-gray-50 flex items-center justify-center border-b border-gray-100 p-4">
-            <img src="/assets/applied-ai-new.svg" alt="2AI Conference" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/applied-ai-new.svg" alt="2AI Conference" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold text-gray-900 mb-2">2AI Conference</h3>
@@ -139,7 +143,7 @@
 
         <div class="bg-white rounded-2xl shadow-md border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
           <div class="h-48 bg-gray-50 flex items-center justify-center border-b border-gray-100 p-4">
-            <img src="/assets/cvmi-new.svg" alt="CVMI Conference" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/cvmi-new.svg" alt="CVMI Conference" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold text-gray-900 mb-2">CVMI Conference</h3>
@@ -150,7 +154,7 @@
 
         <div class="bg-white rounded-2xl shadow-md border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
           <div class="h-48 bg-gray-50 flex items-center justify-center border-b border-gray-100 p-4">
-            <img src="/assets/big-data-africa-new.svg" alt="Big Data Africa Symposium" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/big-data-africa-new.svg" alt="Big Data Africa Symposium" class="max-h-full max-w-full object-contain" />
           </div>
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold text-gray-900 mb-2">Big Data Africa Symposium</h3>

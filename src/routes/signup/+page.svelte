@@ -2,6 +2,7 @@
   import { supabase } from '$lib/supabase';
   import { showToast } from '$lib/components/Toast.svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
 
   let email = $state('');
   let password = $state('');
@@ -48,7 +49,7 @@
       } else {
         showToast('Account created! Check your email to confirm your account.', 'success');
         setTimeout(() => {
-          goto('/login');
+          goto(`${base}/login`);
         }, 3000);
       }
     } catch (err) {
@@ -149,12 +150,12 @@
 
       <div class="text-center text-sm pt-4">
         <span class="text-gray-600 font-medium">Already have a password?</span>
-        <a href="/login" class="text-gray-800 hover:text-[#C53030] font-bold transition-colors ml-1">Sign in</a>
+        <a href="{base}/login" class="text-gray-800 hover:text-[#C53030] font-bold transition-colors ml-1">Sign in</a>
       </div>
     </form>
   </main>
 
-  <a href="/blog" class="inline-flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-white/30">
+  <a href="{base}/blog" class="inline-flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-white/30">
     <i class="bx bx-chevron-left text-lg mr-1"></i> Back to Blog
   </a>
 </div>

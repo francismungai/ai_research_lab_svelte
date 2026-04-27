@@ -3,6 +3,7 @@
   import { supabase } from '$lib/supabase';
   import { showToast } from '$lib/components/Toast.svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { authState } from '$lib/auth.svelte';
   import { marked } from 'marked';
 
@@ -34,7 +35,7 @@
   onMount(async () => {
     // Basic Auth Check
     if (!authState.loading && !authState.user) {
-      goto('/login');
+      goto(`${base}/login`);
     }
 
     if (postId) {
@@ -114,14 +115,14 @@
         const { data, error } = await supabase.from('blog_posts').insert(postData).select().single();
         if (error) throw error;
         postId = data.id;
-        window.history.replaceState({}, "", `/edit-post/${postId}`);
+        window.history.replaceState({}, "", `${base}/edit-post/${postId}`);
       }
 
       isUnsaved = false;
       showToast(status === 'published' ? 'Post published!' : 'Draft saved!', 'success');
 
       if (status === 'published') {
-        setTimeout(() => goto('/blog'), 1000);
+        setTimeout(() => goto(`${base}/blog`), 1000);
       }
     } catch (err: any) {
       if (err.code === '23505') {
@@ -163,7 +164,7 @@
 <header class="bg-white border-b border-gray-200 sticky top-16 z-40 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
     <div class="flex items-center gap-4">
-      <a href="/blog" class="inline-flex items-center text-gray-500 hover:text-gray-900 transition-colors font-medium text-sm">
+      <a href="{base}/blog" class="inline-flex items-center text-gray-500 hover:text-gray-900 transition-colors font-medium text-sm">
         <i class="bx bx-arrow-back text-lg mr-1.5"></i> Back to Blog
       </a>
       <div class="hidden sm:block h-5 w-px bg-gray-200"></div>

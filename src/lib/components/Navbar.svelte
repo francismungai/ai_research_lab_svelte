@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
+  import { base } from '$app/paths';
   import { supabase } from '$lib/supabase';
   import { authState } from '$lib/auth.svelte';
 
@@ -21,23 +22,23 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16 w-full">
       <div class="flex-1 flex justify-start items-center shrink-0">
-        <a href="/">
+        <a href="{base}/">
           <img
             class="w-27.5 h-27.5 object-contain cursor-pointer transition-all duration-300 filter-[drop-shadow(0_0_1px_#fff)_drop-shadow(0_0_2px_#fff)_drop-shadow(0_0_3px_#fff)] hover:filter-[drop-shadow(0_0_1px_#fff)_drop-shadow(0_0_2px_#fff)_drop-shadow(0_0_4px_rgba(255,255,255,0.95))_drop-shadow(0_0_6px_rgba(220,240,255,0.8))]"
-            src="/assets/logo-BHzomKBk.svg"
+            src="{base}/assets/logo-BHzomKBk.svg"
             alt="USD AI Research Logo"
           />
         </a>
       </div>
 
       <div class="hidden md:flex shrink-0 justify-center space-x-6">
-        <a href="/people" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === '/people' ? 'bg-red-900 rounded-md shadow-inner' : ''}">People</a>
-        <a href="/blog" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === '/blog' ? 'bg-red-900 rounded-md shadow-inner' : ''}">Blog</a>
-        <a href="/publications" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === '/publications' ? 'bg-red-900 rounded-md shadow-inner' : ''}">Publications</a>
-        <a href="/initiatives" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === '/initiatives' ? 'bg-red-900 rounded-md shadow-inner' : ''}">Initiatives</a>
-        <a href="/opportunities" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === '/opportunities' ? 'bg-red-900 rounded-md shadow-inner' : ''}">Careers</a>
-        <a href="/affiliates" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === '/affiliates' ? 'bg-red-900 rounded-md shadow-inner' : ''}">Affiliates</a>
-        <a href="/contact" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === '/contact' ? 'bg-red-900 rounded-md shadow-inner' : ''}">Contact</a>
+        <a href="{base}/people" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === `${base}/people` ? 'bg-red-900 rounded-md shadow-inner' : ''}">People</a>
+        <a href="{base}/blog" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === `${base}/blog` ? 'bg-red-900 rounded-md shadow-inner' : ''}">Blog</a>
+        <a href="{base}/publications" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === `${base}/publications` ? 'bg-red-900 rounded-md shadow-inner' : ''}">Publications</a>
+        <a href="{base}/initiatives" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === `${base}/initiatives` ? 'bg-red-900 rounded-md shadow-inner' : ''}">Initiatives</a>
+        <a href="{base}/opportunities" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === `${base}/opportunities` ? 'bg-red-900 rounded-md shadow-inner' : ''}">Careers</a>
+        <a href="{base}/affiliates" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === `${base}/affiliates` ? 'bg-red-900 rounded-md shadow-inner' : ''}">Affiliates</a>
+        <a href="{base}/contact" class="text-white hover:text-gray-200 px-3 py-2 text-lg font-medium {page.url.pathname === `${base}/contact` ? 'bg-red-900 rounded-md shadow-inner' : ''}">Contact</a>
       </div>
 
       <div class="flex-1 flex justify-end items-center">
@@ -53,7 +54,7 @@
               </button>
             </div>
           {:else}
-            <a href="/login" class="bg-white text-[#C53030] px-5 py-2 rounded-md text-sm font-bold hover:bg-gray-100 transition shadow-sm">Log In</a>
+            <a href="{base}/login" class="bg-white text-[#C53030] px-5 py-2 rounded-md text-sm font-bold hover:bg-gray-100 transition shadow-sm">Log In</a>
           {/if}
         </div>
 
@@ -71,13 +72,13 @@
   {#if isMobileMenuOpen}
   <div class="mobile-menu-container md:hidden bg-[#A52828] border-t border-red-400">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <a href="/people" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === '/people' ? 'bg-red-900 shadow-inner' : ''}">People</a>
-      <a href="/blog" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === '/blog' ? 'bg-red-900 shadow-inner' : ''}">Blog</a>
-      <a href="/publications" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === '/publications' ? 'bg-red-900 shadow-inner' : ''}">Publications</a>
-      <a href="/initiatives" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === '/initiatives' ? 'bg-red-900 shadow-inner' : ''}">Initiatives</a>
-      <a href="/opportunities" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === '/opportunities' ? 'bg-red-900 shadow-inner' : ''}">Careers</a>
-      <a href="/affiliates" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === '/affiliates' ? 'bg-red-900 shadow-inner' : ''}">Affiliates</a>
-      <a href="/contact" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === '/contact' ? 'bg-red-900 shadow-inner' : ''}">Contact</a>
+      <a href="{base}/people" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === `${base}/people` ? 'bg-red-900 shadow-inner' : ''}">People</a>
+      <a href="{base}/blog" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === `${base}/blog` ? 'bg-red-900 shadow-inner' : ''}">Blog</a>
+      <a href="{base}/publications" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === `${base}/publications` ? 'bg-red-900 shadow-inner' : ''}">Publications</a>
+      <a href="{base}/initiatives" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === `${base}/initiatives` ? 'bg-red-900 shadow-inner' : ''}">Initiatives</a>
+      <a href="{base}/opportunities" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === `${base}/opportunities` ? 'bg-red-900 shadow-inner' : ''}">Careers</a>
+      <a href="{base}/affiliates" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === `${base}/affiliates` ? 'bg-red-900 shadow-inner' : ''}">Affiliates</a>
+      <a href="{base}/contact" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-red-800 {page.url.pathname === `${base}/contact` ? 'bg-red-900 shadow-inner' : ''}">Contact</a>
       
       {#if isLogged}
         <div class="px-3 py-2 text-white/80 text-sm font-medium truncate" title={userEmail}>
@@ -88,7 +89,7 @@
           Log Out
         </button>
       {:else}
-        <a href="/login" class="text-white block px-3 py-2 rounded-md text-base font-bold bg-red-900 mt-2">Log In</a>
+        <a href="{base}/login" class="text-white block px-3 py-2 rounded-md text-base font-bold bg-red-900 mt-2">Log In</a>
       {/if}
     </div>
   </div>

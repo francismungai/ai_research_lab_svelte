@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <svelte:head>
   <title>Affiliates | USD AI Research</title>
 </svelte:head>
@@ -16,7 +20,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <a href="https://www.monolythai.com/" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-32 bg-gray-900 rounded-xl p-4">
-            <img src="/assets/monolythai.png" alt="Monolyth AI" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/monolythai.png" alt="Monolyth AI" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-lg font-bold text-gray-900 group-hover:text-[#C53030] transition-colors">Monolyth AI</h3>
           <div class="mt-3 text-sm font-bold text-[#C53030] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -26,7 +30,7 @@
 
         <a href="https://www.sterlingcomputers.com/" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-32 p-4">
-            <img src="/assets/Sterling.png" alt="Sterling" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/Sterling.png" alt="Sterling" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-lg font-bold text-gray-900 group-hover:text-[#C53030] transition-colors">Sterling</h3>
           <div class="mt-3 text-sm font-bold text-[#C53030] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -36,7 +40,7 @@
 
         <a href="https://livevermillion.com/" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-32 p-4">
-            <img src="/assets/Area.png" alt="Vermillion Chamber of Commerce" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/Area.png" alt="Vermillion Chamber of Commerce" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-lg font-bold text-gray-900 group-hover:text-[#C53030] transition-colors">Vermillion Chamber</h3>
           <div class="mt-3 text-sm font-bold text-[#C53030] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -46,7 +50,7 @@
 
         <a href="https://dakotapcwarehouse.com/" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-32 p-4">
-            <img src="/assets/dakota.png" alt="Dakota PC" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/dakota.png" alt="Dakota PC" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-lg font-bold text-gray-900 group-hover:text-[#C53030] transition-colors">Dakota PC</h3>
           <div class="mt-3 text-sm font-bold text-[#C53030] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -64,35 +68,35 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         <a href="https://sd-bcc.org" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-24 p-2">
-            <img src="/assets/SD-BCC.png" alt="SD-BCC" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/SD-BCC.png" alt="SD-BCC" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-sm font-bold text-gray-900 group-hover:text-[#C53030] transition-colors leading-snug">South Dakota Biomedical Computing</h3>
         </a>
 
         <a href="https://lamis.univ-tebessa.dz/" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-24 p-2">
-            <img src="/assets/LAMIS.png" alt="LAMIS Laboratory" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/LAMIS.png" alt="LAMIS Laboratory" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-sm font-bold text-gray-900 group-hover:text-[#C53030] transition-colors leading-snug">LAMIS Laboratory</h3>
         </a>
 
         <a href="https://ai-research-lab.org/affiliates#" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-24 p-2">
-            <img src="/assets/carce_logo.png" alt="CARCE" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/carce_logo.png" alt="CARCE" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-sm font-bold text-gray-900 group-hover:text-[#C53030] transition-colors leading-snug">CARCE</h3>
         </a>
 
         <a href="https://ai-research-lab.org/affiliates#" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-24 p-2">
-            <img src="/assets/cariset_logo.png" alt="CARISET" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/cariset_logo.png" alt="CARISET" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-sm font-bold text-gray-900 group-hover:text-[#C53030] transition-colors leading-snug">CARISET</h3>
         </a>
 
         <a href="https://www.ieee.org/" target="_blank" class="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#C53030] transition-all duration-300 transform hover:-translate-y-1 text-center h-full">
           <div class="flex-1 flex items-center justify-center mb-4 h-24 p-2">
-            <img src="/assets/IEEE.png" alt="IEEE Region 4" class="max-h-full max-w-full object-contain" />
+            <img src="{base}/assets/IEEE.png" alt="IEEE Region 4" class="max-h-full max-w-full object-contain" />
           </div>
           <h3 class="text-sm font-bold text-gray-900 group-hover:text-[#C53030] transition-colors leading-snug">IEEE</h3>
         </a>
