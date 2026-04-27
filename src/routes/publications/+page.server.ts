@@ -1,4 +1,5 @@
 import { supabase } from '$lib/supabase';
+import { base } from '$app/paths';
 import type { PageServerLoad } from './$types';
 
 export const prerender = true;
@@ -82,7 +83,7 @@ export const load: PageServerLoad = async () => {
     isbn: b.isbn ?? '',
     amazonUrl: b.amazon_url ?? '',
     publisherUrl: b.publisher_url ?? '',
-    imageUrl: b.image_url ?? ''
+    imageUrl: b.image_url ? `${base}${b.image_url}` : ''
   }));
 
   return {
