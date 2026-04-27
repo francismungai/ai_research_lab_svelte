@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   let activeAccordion = $state<string | null>('current');
 
   function toggle(id: string) {
@@ -19,7 +20,7 @@
           We are continuously looking for highly motivated and talented people to contribute to our research in AI, machine learning, and computer vision. Our positions are competitive and limited to maintain a focused, research-driven group.
         </p>
         <p>
-          Before applying, please review our recent <a href="/publications" class="text-[#C53030] font-bold hover:underline">publications</a> to ensure alignment with our research directions.
+          Before applying, please review our recent <a href="{base}/publications" class="text-[#C53030] font-bold hover:underline">publications</a> to ensure alignment with our research directions.
         </p>
         <p class="text-sm text-gray-500 italic font-bold">Due to high volume, we may not respond to every inquiry individually.</p>
       </div>
@@ -198,7 +199,7 @@
             <p class="text-gray-700 font-medium text-sm">Support through research assistantships, teaching assistantships, or external fellowships.</p>
           </div>
           <div>
-            <p class="text-gray-700 font-medium text-sm">For general inquiries, visit our <a href="/contact" class="text-[#C53030] hover:underline">Contact page.</a></p>
+            <p class="text-gray-700 font-medium text-sm">For general inquiries, visit our <a href="{base}/contact" class="text-[#C53030] hover:underline">Contact page.</a></p>
           </div>
         </div>
       </div>
