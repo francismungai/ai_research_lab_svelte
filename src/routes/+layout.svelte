@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { supabase } from '$lib/supabase';
   import { authState } from '$lib/auth.svelte';
+  import { base } from '$app/paths';
   import './layout.css';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -28,7 +29,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </svelte:head>
 
-<div class="font-sans text-gray-900 bg-cover bg-center bg-fixed bg-no-repeat min-h-screen flex flex-col" style="background-image: url('/assets/building-bg.jpeg');">
+<div class="font-sans text-gray-900 bg-cover bg-center bg-fixed bg-no-repeat min-h-screen flex flex-col" style="background-image: url('{base}/assets/building-bg.jpeg');">
   <Navbar />
   <main class="flex-1 flex flex-col">
     {@render children()}
